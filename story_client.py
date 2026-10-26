@@ -9,7 +9,7 @@ class Client:
         self.history : History = None
         self.conv_len = 0
         self.model = model if model is not None else 'gemma4:cloud'
-        self.thinking_logs = True if logs is not None else logs
+        self.thinking_logs = logs if logs is not None else True
         self.thoughts = []
         self.async_client = AsyncClient()
         self.create_thoughts()
